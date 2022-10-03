@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ImageBackground,StyleSheet, Text, View,TouchableHighlight } from 'react-native';
 import { useState ,useEffect} from 'react';
 import Checkbox from 'expo-checkbox';
-//qwodjqwodj
+
 export  function Toggleitem(props) {
     const [isPressed1, setisPressed1] = useState(true)
     const [isPressed2, setisPressed2] = useState(true)

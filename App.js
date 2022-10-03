@@ -6,6 +6,9 @@ import {Characters} from './components/Characters'
 import {Rooms} from './components/Rooms'
 import { useState ,useEffect} from 'react';
 
+//this is Beta V0.5
+
+
 export default function App() {
   const [reset1, setreset1] = useState(false)
   const [reset2, setreset2] = useState(false)
