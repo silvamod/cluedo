@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "cluedo",
+    "slug": "cluedo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/cluedo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/cluedo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.mahdius.cluedo"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
