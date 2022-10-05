@@ -5,7 +5,7 @@ import Checkbox from 'expo-checkbox';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export  function Toggleitem(props) {
-    const [isPressed1, setisPressed1] = useState(true)
+    const [isPressed1, setisPressed1] = useState(true) //ispressed variables are used for checkboxes
     const [isPressed2, setisPressed2] = useState(true)
     const [isPressed3, setisPressed3] = useState(true)
     const [isPressed4, setisPressed4] = useState(true)
@@ -15,7 +15,7 @@ export  function Toggleitem(props) {
     const [isPressed8, setisPressed8] = useState(true)
     const [isPressed9, setisPressed9] = useState(true)
 
-    const [isStar1, setisStar1] = useState(false)
+    const [isStar1, setisStar1] = useState(false)  //isstar variables are used for stars
     const [isStar2, setisStar2] = useState(false)
     const [isStar3, setisStar3] = useState(false)
     const [isStar4, setisStar4] = useState(false)
