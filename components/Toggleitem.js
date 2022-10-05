@@ -15,7 +15,7 @@ export  function Toggleitem(props) {
     const [isPressed8, setisPressed8] = useState(true)
     const [isPressed9, setisPressed9] = useState(true)
 
-    const [isStar1, setisStar1] = useState(false)  //isstar variables are used for stars
+    const [isStar1, setisStar1] = useState(false)  //isstar variables are used for stars icons
     const [isStar2, setisStar2] = useState(false)
     const [isStar3, setisStar3] = useState(false)
     const [isStar4, setisStar4] = useState(false)
@@ -24,6 +24,16 @@ export  function Toggleitem(props) {
     const [isStar7, setisStar7] = useState(false)
     const [isStar8, setisStar8] = useState(false)
     const [isStar9, setisStar9] = useState(false)
+
+    const [isQuestion1, setisQuestion1] = useState(false)  //isquestion variables are used for question marks icons
+    const [isQuestion2, setisQuestion2] = useState(false)
+    const [isQuestion3, setisQuestion3] = useState(false)
+    const [isQuestion4, setisQuestion4] = useState(false)
+    const [isQuestion5, setisQuestion5] = useState(false)
+    const [isQuestion6, setisQuestion6] = useState(false)
+    const [isQuestion7, setisQuestion7] = useState(false)
+    const [isQuestion8, setisQuestion8] = useState(false)
+    const [isQuestion9, setisQuestion9] = useState(false)
 
 
 
@@ -45,6 +55,29 @@ export  function Toggleitem(props) {
      setisPressed7(true)
      setisPressed8(true)
      setisPressed9(true)
+
+     setisStar1(false)
+     setisStar2(false)
+     setisStar3(false)
+     setisStar4(false)
+     setisStar5(false)
+     setisStar6(false)
+     setisStar7(false)
+     setisStar8(false)
+     setisStar9(false)
+
+
+
+     setisQuestion1(false)
+     setisQuestion2(false)
+     setisQuestion3(false)
+     setisQuestion4(false)
+     setisQuestion5(false)
+     setisQuestion6(false)
+     setisQuestion7(false)
+     setisQuestion8(false)
+     setisQuestion9(false)
+
 
     }
 
@@ -80,53 +113,81 @@ export  function Toggleitem(props) {
 
     <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1,borderColor:'grey'}}>
 
-        <View style={{height:'100%',width:'80%',alignItems:'center'}}>
+        <View style={{height:'100%',width:'70%',alignItems:'center'}}>
                 
                     <View > 
                         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[0]}</Text> 
                     </View>
             
                     </View>
-                    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar1 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
-                                    setisStar1(!isStar1)
-                                    setisPressed1(isStar1)
+
+                    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+                    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion1 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion1(!isQuestion1)
+                                    
                                 }}>
                 
-                </FontAwesome>
-                </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed1} onValueChange={
-                            ()=> {if(!props.locked)
-                                setisPressed1(!isPressed1)
-                            }
-                        } />
-                        </View>
+                        </FontAwesome>
+                        
+                    </View>
+                            <View style={{height:'100%',width:'33.333333%'}}>
+                                    <FontAwesome style={styles.star} name={isStar1 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                        if(!props.locked)
+                                        setisStar1(!isStar1)
+                                        
+                                    }}>
+                    
+                    </FontAwesome>
+                    </View>
+                    <View style={{height:'100%',width:'33.333333%'}}>
+                            <Checkbox style={styles.checkbox} value={!isPressed1} onValueChange={
+                                ()=> {if(!props.locked)
+                                    setisPressed1(!isPressed1)
+                                }
+                            } />
+                            </View>
+
+                 
             </View>
         </View>
 
 
         <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1,borderColor:'grey'  }}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
       
             <View > 
                   <Text style={{color:'#000000  ',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[1]}</Text> 
             </View>
        
             </View>
-                    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar2 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+                    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+                    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion2 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion2(!isQuestion2)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar2 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar2(!isStar2)
-                                    setisPressed2(isStar2)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed2} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed2} onValueChange={
                             ()=> {if(!props.locked)
                                 setisPressed2(!isPressed2)
                             }
@@ -138,24 +199,37 @@ export  function Toggleitem(props) {
 
     <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
       
             <View > 
                   <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[2]}</Text> 
             </View>
        
             </View>
-            <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar3 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+
+            <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+                
+            <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion3 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion3(!isQuestion3)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar3 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar3(!isStar3)
-                                    setisPressed3(isStar3)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed3} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed3} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed3(!isPressed3)
                             }
@@ -167,24 +241,36 @@ export  function Toggleitem(props) {
 
     <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
       
             <View > 
                   <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[3]}</Text> 
             </View>
        
             </View>
-            <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar4 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+            <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+            <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion4 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion4(!isQuestion4)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar4 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar4(!isStar4)
-                                    setisPressed4(isStar4)
+                                   
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed4} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed4} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed4(!isPressed4)
                             }
@@ -196,24 +282,35 @@ export  function Toggleitem(props) {
 
     <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
       
             <View > 
                   <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[4]}</Text> 
             </View>
        
             </View>
-            <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar5 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+            <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+            <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion5 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion5(!isQuestion5)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar5 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar5(!isStar5)
-                                    setisPressed5(isStar5)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed5} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed5} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed5(!isPressed5)
                             }
@@ -226,24 +323,37 @@ export  function Toggleitem(props) {
 
         <View style={{ flex:1,width: '100%', height:'16.666666%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-    <View style={{height:'100%',width:'80%',alignItems:'center'}}>
+    <View style={{height:'100%',width:'70%',alignItems:'center'}}>
         
                 <View > 
                     <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[5]}</Text> 
                 </View>
         
                 </View>
-                <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar6 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+                <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+                <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion6 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion6(!isQuestion6)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar6 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar6(!isStar6)
-                                    setisPressed6(isStar6)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed6} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed6} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed6(!isPressed6)
                             }
@@ -262,24 +372,37 @@ export  function Toggleitem(props) {
            
             <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-                <View style={{height:'100%',width:'80%',alignItems:'center'}}>
+                <View style={{height:'100%',width:'70%',alignItems:'center'}}>
                     
                     <View > 
                         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[0]}</Text> 
                     </View>
             
                     </View>
-                    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar1 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+                    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+                    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion1 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion1(!isQuestion1)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar1 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar1(!isStar1)
-                                    setisPressed1(isStar1)
+                                  
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed1} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed1} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed1(!isPressed1)
                             }
@@ -291,24 +414,35 @@ export  function Toggleitem(props) {
 
                 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-        <View style={{height:'100%',width:'80%',alignItems:'center'}}>
+        <View style={{height:'100%',width:'70%',alignItems:'center'}}>
             
             <View > 
                 <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[1]}</Text> 
             </View>
 
             </View>
-            <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar2 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+            <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+            <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion2 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion2(!isQuestion2)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar2 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar2(!isStar2)
-                                    setisPressed2(isStar2)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed2} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed2} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed2(!isPressed2)
                             }
@@ -321,24 +455,38 @@ export  function Toggleitem(props) {
 
         <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[2]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar3 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion3 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion3(!isQuestion3)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar3 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar3(!isStar3)
-                                    setisPressed3(isStar3)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed3} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed3} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed3(!isPressed3)
                             }
@@ -351,24 +499,37 @@ export  function Toggleitem(props) {
 
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[3]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar4 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion4 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion4(!isQuestion4)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar4 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar4(!isStar4)
-                                    setisPressed4(isStar4)
+                                  
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed4} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed4} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed4(!isPressed4)
                             }
@@ -380,24 +541,37 @@ export  function Toggleitem(props) {
 
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[4]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar5 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion5 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion5(!isQuestion5)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar5 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar5(!isStar5)
-                                    setisPressed5(isStar5)
+                                  
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed5} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed5} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed5(!isPressed5)
                             }
@@ -409,24 +583,37 @@ export  function Toggleitem(props) {
 
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[5]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar6 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion6 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion6(!isQuestion6)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar6 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar6(!isStar6)
-                                    setisPressed6(isStar6)
+                                
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed6} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed6} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed6(!isPressed6)
                             }
@@ -439,24 +626,37 @@ export  function Toggleitem(props) {
             
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[6]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar7 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion7 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion7(!isQuestion7)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar7 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar7(!isStar7)
-                                    setisPressed7(isStar7)
+                                 
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed7} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed7} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed7(!isPressed7)
                             }
@@ -468,24 +668,38 @@ export  function Toggleitem(props) {
 
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[7]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar8 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion8 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion8(!isQuestion8)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar8 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar8(!isStar8)
-                                    setisPressed8(isStar8)
+                                    
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed8} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed8} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed8(!isPressed8)
                             }
@@ -498,24 +712,38 @@ export  function Toggleitem(props) {
             
 <View style={{ flex:1,width: '100%', height:'11.11111111%',flexDirection: 'row',alignItems:'center',borderWidth:1 ,borderColor:'grey'}}>
 
-<View style={{height:'100%',width:'80%',alignItems:'center'}}>
+<View style={{height:'100%',width:'70%',alignItems:'center'}}>
     
     <View > 
         <Text style={{color:'#000000',fontSize:20,fontWeight:'bold',alignItems:'center'}}>{props.weapons[8]}</Text> 
     </View>
 
     </View>
-    <View style={{height:'100%',width:'20%',flexDirection: 'row',alignItems:'center'}}>
-                        <View style={{height:'100%',width:'50%'}}>
-                                <FontAwesome style={{height:'100%',left:10,marginTop:4}} name={isStar9 ? 'star':'star-o'}  size={24} color='black' onPress={ ()=>{
+    <View style={{height:'100%',width:'30%',flexDirection: 'row',alignItems:'center'}}>
+
+    <View  style={{height:'100%',width:'33.333333%'}}>
+                        <FontAwesome style={styles.star} name={isQuestion9 ? 'question-circle':'question-circle-o'}  size={24} color='yellow' onPress={ ()=>{
+                            if(!props.locked)
+                                    setisQuestion9(!isQuestion9)
+                                    
+                                }}>
+                
+                        </FontAwesome>
+                        
+                    </View>
+
+
+                        <View style={{height:'100%',width:'33.333333%'}}>
+                                <FontAwesome style={styles.star} name={isStar9 ? 'star':'star-o'}  size={24} color='red' onPress={ ()=>{
+                                    if(!props.locked)
                                     setisStar9(!isStar9)
-                                    setisPressed9(isStar9)
+                                
                                 }}>
                 
                 </FontAwesome>
                 </View>
-                <View style={{height:'100%',width:'50%'}}>
-                        <Checkbox style={{height:'80%',width:'75%',left:7,marginTop:3 ,borderWidth:1,borderColor:'black'  }} value={!isPressed9} onValueChange={
+                <View style={{height:'100%',width:'33.333333%'}}>
+                        <Checkbox style={styles.checkbox} value={!isPressed9} onValueChange={
                             ()=> {if(!props.locked) 
                                 setisPressed9(!isPressed9)
                             }
@@ -562,5 +790,21 @@ const styles = StyleSheet.create({
     width:'100%',
     justifyContent: 'center',
   },
+
+  star:{
+    height:'100%',
+    left:10,
+    marginTop:5
+
+  },
+
+  checkbox:{
+    height:'80%',
+    width:'75%',
+    left:7,marginTop:3 
+    ,borderWidth:1,
+    borderColor:'black'  ,
+  },
+  
 
 });
